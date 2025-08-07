@@ -73,6 +73,21 @@ function JSXExamples(){
             })()}
 
         </section>
+        <section>
+            <h3>Product list</h3>
+            {[
+                        { id: 1, name: 'book', price: 150, inStock: true },
+                        { id: 2, name: 'tablet', price: 15000, inStock: true },
+                        { id: 3, name: 'computer', price: 129000, inStock: false }
+                    ].map(product => (
+                        <div>
+                            {product.name}
+                             - {product.price.toLocaleString()}
+                            
+                                {product.inStock ? ' ✅ มีสินค้า' : ' ❌ สินค้าหมด'}
+                        </div>
+                    ))}
+        </section>
         </div>
     )
 
